@@ -1,0 +1,164 @@
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+
+@import "compass/reset";
+@import "compass/css3";
+@import "compass/typography/links/link-colors";
+@import "singularitygs";
+@import "base";
+
+@import "web-fonts";
+@include web-font(Monda, sans-serif);
+
+$grids: 1;
+$grids: add-grid( 6 at $break1 );
+$grids: add-grid( 12 at $break2 );
+$gutters: 0;
+$gutters: add-gutter( 1/8 at $break1 );
+$gutters: add-gutter( 1/8 at $break2 );
+$output: 'isolation';
+$h1: 2em;
+
+* {
+    @include box-sizing('border-box');
+    font-family: 'Monda', sans-serif;
+}
+
+body {
+    font-family: 'Monda', sans-serif;
+    background-color: $backgroundColor;
+}
+
+h1 { font-size: $h1;}
+h2 { font-size: $h1 - .2em;}
+h3 { font-size: $h1 - .4em;}
+h4 { font-size: $h1 - .6em;}
+h5 { font-size: $h1 - .8em;}
+h6 { font-size: $h1 - 1em;}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: bold;
+}
+
+header {
+    height: $navHeight;
+    background: $darkGray;
+    border-bottom: $darkerGray;
+    @include box-shadow(0 1px 0 $lightGray);
+    color: $badass;
+
+    h1 {
+        @include grid-span(1, 1);
+        text-align: center;
+        .more {
+            float: right;
+            display: block;
+            background: red;
+        }
+
+        @include breakpoint($break1) {
+            @include grid-span(3, 1);
+            .more {
+                display: none;
+            }
+        }
+
+        @include breakpoint($break2) {
+            @include grid-span(4, 1);
+            .more {
+                display: none;
+            }
+        }
+    }
+
+    .search {
+        padding-top: 4px;
+        display: None;
+        text-align: center;
+        button {
+            border: none;
+            @include border-radius(3px);
+        }
+        input[type=text] {
+            @extend button;
+            width: 50%;
+        }
+
+        @include breakpoint($break1) {
+            @include grid-span(3, 4);
+            display: block;
+        }
+        @include breakpoint($break2) {
+            @include grid-span(4, 5);
+            display: block;
+        }
+    }
+
+    nav {
+        display: none;
+        @include breakpoint($break2) {
+            display: block;
+            @include grid-span(4, 9);
+            text-align: center;
+            &:before {
+                display: none;
+            }
+            ul {
+                height: 100%;
+                display: inline-block;
+                li {
+                    display: inherit;
+                    a {
+                        @include link-colors($badass, $badass - #111);
+                        text-decoration: none;
+                        text-align: center;
+                        display: inherit;
+                        height: inherit;
+                        line-height: $navHeight;
+                        padding: 0 20 0 20;
+                        &:hover {
+                            $topGray: $darkGray - #080808;
+                            $bottomGray: $darkGray - #111;
+                            @include background-image(linear-gradient($topGray 20%, $bottomGray));
+                        }
+                    }
+                }
+            }
+        }
+            
+    }
+}
+
+.tile {
+    @include grid-span(4);
+    float: left;
+    box-shadow: 1px 0   1px #203891,
+                2px 1px 1px #203891,
+                3px 2px 1px #203891,
+                4px 3px 1px #203891,
+                5px 4px 1px #203891,
+                6px 5px 1px #203891,
+                0   1px 1px #3852B1,
+                1px 2px 1px #3852B1,
+                2px 3px 1px #3852B1,
+                3px 4px 1px #3852B1,
+                4px 5px 1px #3852B1;
+
+    img {
+        width: 100%;
+    }
+
+    @include breakpoint($break1) {
+        @include grid-span(3);
+        display: block;
+    }
+
+    @include breakpoint($break2) {
+        @include grid-span(2, 3);
+    }
+    margin-right: 0;
+
+}
+

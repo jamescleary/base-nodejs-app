@@ -1,0 +1,309 @@
+@import url(http://fonts.googleapis.com/css?family=Monda:sans-serif);
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+/* line 17, ../../../../../../usr/lib/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+/* line 22, ../../../../../../usr/lib/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+html {
+  line-height: 1;
+}
+
+/* line 24, ../../../../../../usr/lib/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+ol, ul {
+  list-style: none;
+}
+
+/* line 26, ../../../../../../usr/lib/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* line 28, ../../../../../../usr/lib/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+/* line 30, ../../../../../../usr/lib/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+q, blockquote {
+  quotes: none;
+}
+/* line 103, ../../../../../../usr/lib/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+q:before, q:after, blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+/* line 32, ../../../../../../usr/lib/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+a img {
+  border: none;
+}
+
+/* line 116, ../../../../../../usr/lib/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary {
+  display: block;
+}
+
+/*
+ * This is a fairly big mixin.
+ * The reason for this is that at the time of writing (09/01/2013),
+ * Sass does not include functions for substring or find/replace in string.
+ * Chris Eppstein sent a Pull Request to Sass with the str-extract (substring) function back in June,
+ * but it still has not been merged, due to lack of minor comments.
+ * That was five months ago.
+ */
+/* line 24, ../scss/main.scss */
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  font-family: 'Monda', sans-serif;
+}
+
+/* line 29, ../scss/main.scss */
+body {
+  font-family: 'Monda', sans-serif;
+  background-color: #cdf5f7;
+}
+
+/* line 34, ../scss/main.scss */
+h1 {
+  font-size: 2em;
+}
+
+/* line 35, ../scss/main.scss */
+h2 {
+  font-size: 1.8em;
+}
+
+/* line 36, ../scss/main.scss */
+h3 {
+  font-size: 1.6em;
+}
+
+/* line 37, ../scss/main.scss */
+h4 {
+  font-size: 1.4em;
+}
+
+/* line 38, ../scss/main.scss */
+h5 {
+  font-size: 1.2em;
+}
+
+/* line 39, ../scss/main.scss */
+h6 {
+  font-size: 1em;
+}
+
+/* line 41, ../scss/main.scss */
+h1, h2, h3, h4, h5, h6 {
+  font-weight: bold;
+}
+
+/* line 45, ../scss/main.scss */
+header {
+  height: 35px;
+  background: #444444;
+  border-bottom: #222222;
+  -webkit-box-shadow: 0 1px 0 #cccccc;
+  -moz-box-shadow: 0 1px 0 #cccccc;
+  box-shadow: 0 1px 0 #cccccc;
+  color: #49dee6;
+}
+/* line 52, ../scss/main.scss */
+header h1 {
+  width: 100%;
+  float: right;
+  margin-left: 0;
+  margin-right: 0;
+  clear: none;
+  text-align: center;
+}
+/* line 55, ../scss/main.scss */
+header h1 .more {
+  float: right;
+  display: block;
+  background: red;
+}
+@media (min-width: 563px) {
+  /* line 52, ../scss/main.scss */
+  header h1 {
+    width: 49.0566%;
+    float: left;
+    margin-right: -100%;
+    margin-left: 0%;
+    clear: none;
+  }
+  /* line 63, ../scss/main.scss */
+  header h1 .more {
+    display: none;
+  }
+}
+@media (min-width: 838px) {
+  /* line 52, ../scss/main.scss */
+  header h1 {
+    width: 32.71028%;
+    float: left;
+    margin-right: -100%;
+    margin-left: 0%;
+    clear: none;
+  }
+  /* line 70, ../scss/main.scss */
+  header h1 .more {
+    display: none;
+  }
+}
+/* line 76, ../scss/main.scss */
+header .search {
+  padding-top: 4px;
+  display: None;
+  text-align: center;
+}
+/* line 80, ../scss/main.scss */
+header .search button, header .search input[type=text] {
+  border: none;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -o-border-radius: 3px;
+  border-radius: 3px;
+}
+/* line 84, ../scss/main.scss */
+header .search input[type=text] {
+  width: 50%;
+}
+@media (min-width: 563px) {
+  /* line 76, ../scss/main.scss */
+  header .search {
+    width: 49.0566%;
+    float: right;
+    margin-left: 0;
+    margin-right: 0;
+    clear: none;
+    display: block;
+  }
+}
+@media (min-width: 838px) {
+  /* line 76, ../scss/main.scss */
+  header .search {
+    width: 32.71028%;
+    float: left;
+    margin-right: -100%;
+    margin-left: 33.64486%;
+    clear: none;
+    display: block;
+  }
+}
+/* line 99, ../scss/main.scss */
+header nav {
+  display: none;
+}
+@media (min-width: 838px) {
+  /* line 99, ../scss/main.scss */
+  header nav {
+    display: block;
+    width: 32.71028%;
+    float: right;
+    margin-left: 0;
+    margin-right: 0;
+    clear: none;
+    text-align: center;
+  }
+  /* line 105, ../scss/main.scss */
+  header nav:before {
+    display: none;
+  }
+  /* line 108, ../scss/main.scss */
+  header nav ul {
+    height: 100%;
+    display: inline-block;
+  }
+  /* line 111, ../scss/main.scss */
+  header nav ul li {
+    display: inherit;
+  }
+  /* line 113, ../scss/main.scss */
+  header nav ul li a {
+    color: #49dee6;
+    text-decoration: none;
+    text-align: center;
+    display: inherit;
+    height: inherit;
+    line-height: 35px;
+    padding: 0 20 0 20;
+  }
+  /* line 24, ../../../../../../usr/lib/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/typography/links/_link-colors.scss */
+  header nav ul li a:hover {
+    color: #38cdd5;
+  }
+  /* line 121, ../scss/main.scss */
+  header nav ul li a:hover {
+    background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(20%, #3c3c3c), color-stop(100%, #333333));
+    background-image: -webkit-linear-gradient(#3c3c3c 20%, #333333);
+    background-image: -moz-linear-gradient(#3c3c3c 20%, #333333);
+    background-image: -o-linear-gradient(#3c3c3c 20%, #333333);
+    background-image: linear-gradient(#3c3c3c 20%, #333333);
+  }
+}
+
+/* line 134, ../scss/main.scss */
+.tile {
+  width: 400%;
+  float: left;
+  margin-right: -100%;
+  margin-left: 0%;
+  clear: none;
+  float: left;
+  box-shadow: 1px 0   1px #203891, 2px 1px 1px #203891, 3px 2px 1px #203891, 4px 3px 1px #203891, 5px 4px 1px #203891, 6px 5px 1px #203891, 0   1px 1px #3852B1, 1px 2px 1px #3852B1, 2px 3px 1px #3852B1, 3px 4px 1px #3852B1, 4px 5px 1px #3852B1;
+  margin-right: 0;
+}
+/* line 149, ../scss/main.scss */
+.tile img {
+  width: 100%;
+}
+@media (min-width: 563px) {
+  /* line 134, ../scss/main.scss */
+  .tile {
+    width: 49.0566%;
+    float: left;
+    margin-right: -100%;
+    margin-left: 0%;
+    clear: none;
+    display: block;
+  }
+}
+@media (min-width: 838px) {
+  /* line 134, ../scss/main.scss */
+  .tile {
+    width: 15.88785%;
+    float: left;
+    margin-right: -100%;
+    margin-left: 16.82243%;
+    clear: none;
+  }
+}
